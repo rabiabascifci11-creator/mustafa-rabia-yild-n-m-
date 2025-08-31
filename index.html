@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1. Yıl Dönümümüz</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+    margin-bottom: 5px;
+  }
+
+  p.date {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    margin: 0;
+  }
+
+  p.love {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    margin: 5px 0 30px 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  }
+
+  /* Slider */
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .slide-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+
+  .slide img:hover {
+    transform: scale(1.03);
+  }
+
+  .caption {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: rgba(0,0,0,0.5);
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 2rem;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+
+  /* Mektup */
+  .letter {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    background: rgba(0,0,0,0.3);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  }
+
+  .letter h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+  }
+
+  /* Kalpler animasyonu */
+  .heart {
+    position: absolute;
+    bottom: -50px;
+    color: #ff477e;
+    font-size: 24px;
+    animation: rise 6s linear infinite;
+  }
+
+  @keyframes rise {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-110vh) scale(1.5); opacity: 0; }
+  }
+
+  /* Ses çalar ve butonlar */
+  .audio-player {
+    margin: 20px 0;
+  }
+
+  .audio-btns {
+    margin-top: 10px;
+  }
+
+  .audio-btns button {
+    font-size: 1rem;
+    padding: 8px 12px;
+    margin: 0 5px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  @media (max-width: 600px){
+    h1 { font-size: 2.2rem; }
+    p.date { font-size: 1.5rem; }
+    p.love { font-size: 1.3rem; }
+    .caption { font-size: 1rem; }
+    .letter { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>1. YILIMIZ KUTLU OLSUN SEVGİLİM 💖</h1>
+<p class="date">04.09.2024 ∞ Mustafa & Rabia</p>
+<p class="love">SENİ ÇOOK SEVİYORUMMM ❤️</p>
+
+<h2>Bizim Anılarımız 📸</h2>
+<div class="carousel">
+  <button id="prev">&lt;</button>
+  <div class="slide-container">
+    <div class="slide">
+      <img src="foto_1.jpg" alt="Fotoğraf 1">
+      <p class="caption" id="slide-caption"></p>
+    </div>
+  </div>
+  <button id="next">&gt;</button>
+</div>
+
+<!-- Mektup -->
+<div class="letter">
+  <h3>Sevgilim,</h3>
+  <p>Bugün bizim ilk yıldönümümüz… Düşünsene, daha dün gibi her şeyi ilk kez yaşadığımız o günler, ilk gülüşlerimiz, ilk bakışlarımız… Ve işte bir yıl geçti, her anı seninle birlikte yaşamak benim için tarifsiz bir mutluluk oldu. 💖</p>
+  <p>Seninle her günüm daha özel, daha anlamlı. Seninle güldüğüm, seninle konuştuğum, bazen sadece sessizce yan yana oturduğumuz o anlar… Hepsi kalbimde ölümsüzleşti. Sen benim hem huzurum, hem heyecanım, hem de en büyük şansımsın. 🌹</p>
+  <p>Biliyorum, bu yıldönümünü belki yan yana kutlayamıyoruz ama biliyorum ki kalplerimiz her zaman bir. Senin sevgin, şefkatin ve anlayışın bana her gün güç veriyor. Her şeyim, her zaman yanında olacağımı bilmeni istiyorum.</p>
+  <p>İyi ki varsın, iyi ki benim aşkımsın. Daha nice yıldönümlerimiz olsun ve her geçen gün sevgimiz daha da büyüsün. Seni her şeyden çok, tarifsiz bir şekilde seviyorum. ❤️</p>
+  <p style="text-align:right; font-weight:bold;">Sonsuz aşkınla, BİRİCİK SEVGİLİN</p>
+</div>
+
+<h2>Dinlediğimde aklıma sen gelen şarkılar 🎶</h2>
+<div class="audio-player">
+  <audio id="audio-player" controls>
+    <source src="sarki_1.mp3" type="audio/mpeg">
+    Tarayıcınız ses çaları desteklemiyor.
+  </audio>
+  <div class="audio-btns">
+    <button onclick="changeSong('sarki_1.mp3')">Şarkı 1</button>
+    <button onclick="changeSong('sarki_2.mp3')">Şarkı 2</button>
+    <button onclick="changeSong('sarki_3.mp3')">Şarkı 3</button>
+  </div>
+</div>
+
+<script>
+  // Kalpler
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 5) + 's';
+    document.body.appendChild(heart);
+    setTimeout(() => { heart.remove(); }, 8000);
+  }
+  setInterval(createHeart, 500);
+
+  // Slider
+  const slides = [
+    {src:"foto_1.jpg", caption:"Aşkım, bu fotoğrafa bakınca hatırlıyorum. Yanımızda ablan falan vardı ama ben o an senden hoşlanmaya başlamıştım 😍"},
+    {src:"foto_2.jpg", caption:"Aşkım, bu bizim sevgili olduktan sonraki ilk gizli fotoğrafımız 😏💖 O an sadece ikimiz vardık ❤️"},
+    {src:"foto_3.jpg", caption:"Aşkım, doğduğumuz ayların birleşimi tıpkı kalplerimiz gibi uyumlu 🌌"},
+    {src:"foto_4.jpg", caption:"Bebeğim, her konuşmamızda çok mutlu oluyorum ❤️"},
+    {src:"foto_5.jpg", caption:"%100 uyum = Sen + Ben = Sonsuz mutluluk ✨"},
+    {src:"foto_6.jpg", caption:"Aşkım, seninle bebeklik fotoğraflarımızı yan yana görünce fark ettim ki, biz baştan beri birbirimizi tamamlıyormuşuz 💖"},
+    {src:"foto_7.jpg", caption:"Bu gülüşümüz, en çok benim kalbimi ısıtıyor ❤️"},
+    {src:"foto_8.jpg", caption:"Aşkım, minik dostumuzla olan anın bana senin masumiyetini hatırlatıyor 😽💖"},
+    {src:"foto_9.jpg", caption:"Bebeğim, her görüntülü konuşmamızda kalbim hızlı hızlı atıyor 😘"},
+    {src:"foto_10.jpg", caption:"Aşkım, her şeye rağmen birlikte anı biriktirebildik; her anımız çok değerli 💕"},
+    {src:"foto_11.jpg", caption:"Bebeğim, bu fotoğrafa bakınca gülümsüyorum 😄"},
+    {src:"foto_12.jpg", caption:"Aşkım, o gün ayağım çatladığında yanımda olman bana çok şey hissettirdi 😘💖"},
+    {src:"foto_13.jpg", caption:"Bebeğim, sen geldiğinde sakalını oynatmayı ne kadar sevdiğimi hatırlıyor musun? 😏💫❤️"},
+    {src:"foto_14.jpg", caption:"Aşkım, bu öpücüğümüz kalbime kazınmış en güzel anımız 😘💖"},
+    {src:"foto_15.jpg", caption:"Bebeğim, senin hediyeni açarkenki mutluluğun bana yetiyor 🎁💖"},
+    {src:"foto_16.jpg", caption:"Aşkım, askere giderken çekindiğimiz o fotoğraf 💔"},
+    {src:"foto_17.jpg", caption:"El ele tutuştuğumuz o an… Sana söz veriyorum, o ilk günkü gibi ellerini bırakmayacağım ❤️"}
+  ];
+
+  let current = 0;
+  const slideImg = document.querySelector('.slide img');
+  const slideCaption = document.getElementById('slide-caption');
+
+  function showSlide(index){
+    slideImg.src = slides[index].src;
+    slideCaption.textContent = slides[index].caption;
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    current = (current-1+slides.length)%slides.length;
+    showSlide(current);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    current = (current+1)%slides.length;
+    showSlide(current);
+  });
+
+  // Fotoğraf tıklayınca tam ekran
+  slideImg.addEventListener('click', () => {
+    const overlay = document.createElement('div');
+    overlay.style.position='fixed';
+    overlay.style.top=0;
+    overlay.style.left=0;
+    overlay.style.width='100%';
+    overlay.style.height='100%';
+    overlay.style.background='rgba(0,0,0,0.8)';
+    overlay.style.display='flex';
+    overlay.style.justifyContent='center';
+    overlay.style.alignItems='center';
+    overlay.style.cursor='pointer';
+    const bigImg = document.createElement('img');
+    bigImg.src = slideImg.src;
+    bigImg.style.maxWidth='90%';
+    bigImg.style.maxHeight='90%';
+    bigImg.style.borderRadius='15px';
+    overlay.appendChild(bigImg);
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', ()=> overlay.remove());
+  });
+
+  showSlide(current);
+
+  // Şarkı değiştirme
+  function changeSong(file){
+    const player = document.getElementById('audio-player');
+    player.src = file;
+    player.play();
+  }
+</script>
+</body>
+</html>
